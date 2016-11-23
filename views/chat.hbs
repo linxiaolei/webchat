@@ -1,0 +1,96 @@
+<div class="chatBox">
+    <div class="chat_list">
+        <div class="usrInfo">
+            <div id="usrImg" class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    <img src="/images/2.jpg" class="img-rounded">
+                </a>
+                <ul class="dropdown-menu pull-left" role="menu">
+                    <li><img src="/images/2.jpg" id="bigImg"></li>
+                    <li>
+                        <div id="bigName">
+                            <span>XX</span>
+                            <a class="fa fa-comments-o"></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="usrRemark">
+                            <span>备注：</span>
+                            <p>XXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div id="username">username</div>
+            <div id="usrList">
+                <div class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu pull-right" role="menu">
+                        <li><a href="#">XX</a></li>
+                        <li><a href="#">XX</a></li>
+                        <li><a href="#">XX</a></li>
+                        <li><a href="#">XX</a></li>
+                        <li>
+                            <a href="/logout">
+                                <i class="fa fa-power-off" style="margin-right: 10px"></i>
+                                退出
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="addFriend" class="accordion">
+            <div class="accordion-group">
+                <a class="accordion-toggle btn" data-toggle="collapse" data-parent="#addFriend" href="#findList">
+                    添加好友
+                </a>
+                <ul id="findList" class="accordion-body collapse" >
+                    <li>
+                        <form class="accordion-heading"  target="hiddenIFrame">
+                            <input type="text" name="keyword" id="keyword" placeholder="搜索">
+                            <button type="submit" id="searchBtn" class="btn fa fa-search"></button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="friendList">
+            <div id="list_name">
+                <a  class="btn btn2 btn-default">好友列表</a>
+            </div>
+            <ul id="friend_list">
+
+            </ul>
+        </div>
+    </div>
+    <div class="chat_area">
+        <div id="chatObj">
+            <p>wuyu</p>
+        </div>
+        <div class="historyMsg">
+            <ul class="chatContent"></ul>
+        </div>
+        <form class="inputMsg" role="form">
+            <div id="items">
+                <a href="#" id="showEmoji">
+                    <input id="emoji" type="button" value="emoji" title="emoji" />
+                    <img src="/images/emoji.png">
+                </a>
+                <label id="showImage">
+                    <input id="image" type="file" name="file" value="file" accept="image/*"/>
+                    <i class="fa fa-picture-o"></i>
+                </label>
+            </div>
+            <textarea id="messageInput" placeHolder="说些什么。。。">
+            </textarea>
+            <button id="sendBtn" type="submit" class="btn">发送</button>
+            <div id="emojiWrapper">
+            </div>
+        </form>
+    </div>
+    <iframe style="display:none; height:0" name="hiddenIFrame" id="hiddenIFrame"/>
+</div>

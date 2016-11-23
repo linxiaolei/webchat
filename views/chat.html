@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../public/stylesheets/style.css">
+    <link rel="stylesheet" href="../public/lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../public/lib/font-awesome-4.5.0/css/font-awesome.css">
+
+    <script src="../public/lib/jquery/jquery.min.js"></script>
+    <script src="../public/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../public/javascripts/chatList.js"></script>
+    <!--<script src="../public/javascripts/chat.js"></script>-->
+    <!--<script src="./public/lib/cookie/jquery.cookie.js" ></script>-->
+    <!--<script src="../public/lib/socket.io/socket.io.js"></script>-->
+</head>
+
+<body>
+<div class="container-fluid">
+    <div class="chatBox">
+        <div class="chat_list">
+            <div class="usrInfo">
+                <div id="usrImg" class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <img src="../public/images/2.jpg" class="img-rounded">
+                    </a>
+                    <ul class="dropdown-menu pull-left" role="menu">
+                        <li><img src="../public/images/2.jpg" id="bigImg"></li>
+                        <li>
+                            <div id="bigName">
+                                <span>XX</span>
+                                <a class="fa fa-comments-o"></a>
+                            </div>
+                        </li>
+                        <li>
+                            <div id="usrRemark">
+                                <span>备注：</span>
+                                <p>XXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div id="username">username</div>
+                <div id="usrList">
+                    <div class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <i class="glyphicon glyphicon-th-list"></i>
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu pull-right" role="menu">
+                            <li><a href="#">XX</a></li>
+                            <li><a href="#">XX</a></li>
+                            <li><a href="#">XX</a></li>
+                            <li><a href="#">XX</a></li>
+                            <li><a href="#">XX</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="addFriend" class="accordion">
+                <div class="accordion-group">
+                    <a class="accordion-toggle btn" data-toggle="collapse" data-parent="#addFriend" href="#findList">
+                        添加好友
+                    </a>
+                    <ul id="findList" class="accordion-body collapse" >
+                        <li>
+                            <form class="accordion-heading" method="GET" action="/search">
+                                <input type="text" name="keyword"  placeholder="搜索">
+                                <button type="submit" id="searchBtn" class="btn fa fa-search"></button>
+                            </form>
+                        </li>
+                        <li>user</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="friendList">
+                <div id="list_name">
+                    <a  class="btn btn2 btn-default">好友列表</a>
+                </div>
+                <ul id="friend_list">
+                    <li>
+                        <a href="#">
+                            <img src="../public/images/2.jpg">
+                            <span class="unreadMsg">12</span>
+                            <span>username</span>
+                        </a>
+                    </li>
+                    <li><a href="#">XXX</a></li>
+                    <li><a href="#">XXX</a></li>
+                    <li><a href="#">sXXX</a></li>
+                    <li><a href="#">XXX</a></li>
+                    <li><a href="#">XXX</a></li>
+                    <li><a href="#">XXX</a></li>
+                    <li><a href="#">XXX</a></li>
+                    <li><a href="#">XXX</a></li>
+                    <li><a href="#">XXX</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="chat_area">
+            <div id="chatObj">
+                <p>wuyu</p>
+            </div>
+            <div class="historyMsg">
+                <ul></ul>
+            </div>
+            <form class="inputMsg" role="form">
+                <div id="items">
+                    <a href="#">
+                        <input id="emoji" type="button" value="emoji" title="emoji" />
+                        <img src="/images/emoji.png">
+                    </a>
+                </div>
+                <textarea id="messageInput" placeHolder="enter to send"></textarea>
+                <button id="sendBtn" type="submit" class="btn">发送</button>
+                <div id="emojiWrapper">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

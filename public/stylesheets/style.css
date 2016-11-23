@@ -1,0 +1,499 @@
+html{
+    height: 100%;
+    font-size: 62.5%;
+}
+body{
+    width: 100%;
+    height: 100%;
+    min-width: 600px;
+    font-family: "微软雅黑";
+}
+ul{
+    padding: 0;
+    list-style: none;
+}
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: transparent;
+}
+/*定义滚动条轨道 内阴影+圆角*/
+ ::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: rgba(0,0,0,.1);
+}
+
+.container-fluid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-image: url('/images/2.jpg');
+    background-size: cover;
+}
+.loginBox form,
+.registerBox form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    background: #ffffff;
+    border-radius: 5px;
+}
+.loginBox form {
+    height: 200px;
+}
+.registerBox form {
+    height: 235px;
+}
+.loginBox form input {
+    width: 80%;
+    height: 15%;
+    margin: 10px;
+}
+.loginBox form .btn{
+    width: 80%;
+    height: 20%;
+    background: #2b669a;
+    color: white;
+}
+.loginBox #login_msg {
+    margin-top: 5px;
+    text-align: center;
+}
+.registerBox form .input-group {
+    width: 80%;
+    margin: 10px;
+}
+.chatBox {
+    display: flex;
+    flex-direction: row;
+    width: 76%;
+    height: 98%;
+}
+.chat_list {
+    display: flex;
+    flex-direction: column;
+    width: 27%;
+    height: 100%;
+    background-color: rgb(46, 50, 56);
+    border-radius: 5px;
+}
+.chat_list .usrInfo{
+    width: 100%;
+    height: 15%;
+    background-color: rgb(46, 50, 56);
+    border-radius: 5px;
+}
+.usrInfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px;
+}
+.usrInfo #usrImg{
+    width: 60px;
+    height: 60px;
+    background-color: #0f0f0f;
+}
+.usrInfo #usrImg ul{
+    padding: 0;
+    border-radius: 5px;
+    margin-left: 25px;
+    width: 220px;
+    height: 330px;
+}
+.usrInfo #usrImg ul #bigImg{
+    border-radius: 5px 5px 0 0;
+    width: 100%;
+    height: 220px;
+}
+.usrInfo #usrImg #bigName{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: 20px 20px 0 20px;
+    font-size: 2.0rem;
+}
+.usrInfo #usrImg #bigName a,
+.usrInfo #usrImg #bigName a:hover {
+    text-decoration: none;
+    color: black;
+}
+.usrInfo #usrImg #usrRemark{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0px 20px 0 20px;
+    font-size: 1.0rem;
+    color: #b8bbc7;
+}
+.usrInfo #usrImg #usrRemark p{
+    width: 100px;
+    word-break: break-all;
+}
+.usrInfo #username{
+    position: relative;
+    left: -10%;
+    line-height: 60px;
+    color: white;
+}
+.usrInfo #usrImg img{
+    width: 100%;
+    height: 100%;
+}
+.usrInfo #usrList{
+    margin-top: 20px;
+}
+.usrInfo #usrList a,
+.usrInfo #usrList a:hover{
+    color: rgb(119, 119, 119);
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+#addFriend{
+    display: flex;
+    width: 100%;
+    padding: 0;
+    background-color: rgb(46, 50, 56);
+}
+.accordion .accordion-group{
+    width: 100%;
+}
+#addFriend .accordion-group>.btn{
+    width: 100%;
+    padding: 8px 0;
+    background: rgb(46, 50, 56);
+    border: none;
+    color: white;
+    outline: none;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: "Microsoft YaHei UI";
+}
+#addFriend .accordion-group>a:hover{
+    background: #45444d;
+}
+#addFriend form input{
+    width: 95%;
+    height: 33px;
+    margin: 5px;
+    border-radius: 3px;
+    background: #26292E;
+    padding-left: 42px;
+    outline: none;
+    border: none;
+    color: #dddddd;
+}
+#addFriend form #searchBtn{
+    position: relative;
+    top: -35px;
+    left: 5px;
+    color: whitesmoke;
+    background-color: #26292E;
+    outline: none;
+}
+#addFriend #findList{
+    width: 100%;
+}
+#addFriend #findList li:first-child{
+    border:none;
+    height: 35px;
+}
+#addFriend #findList li:not(:first-child){
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    color: whitesmoke;
+    list-style: none;
+    border: 1px solid #26292E;
+    -webkit-transition: all 0.3s linear;
+}
+#addFriend #findList li:not(:first-child) p{
+    width: 80%;
+    height: 100%;
+}
+#addFriend #findList li:not(:first-child) #addBtn{
+    margin-right: 5px;
+    width: 20%;
+    height: 50%;
+    text-align: center;
+    background-color: #45444d;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: "Microsoft YaHei UI";
+    outline: none;
+}
+.friendList{
+    position: relative;
+    width: 100%;
+    height: 72%;
+    overflow: hidden;
+}
+.friendList #list_name{
+    display: flex;
+    width: 100%;
+    height: 7%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background-color: rgb(46, 50, 56);
+    font-size: 2.0rem;
+    font-weight: 400;
+    font-family: "Microsoft YaHei UI";
+}
+.friendList #list_name .btn{
+    width: 100%;
+    background: #45444d;
+    border: none;
+    color: white;
+    outline: none;
+}
+.friendList ul{
+    position: absolute;
+    padding: 0;
+    width: 100%;
+    height: 93%;
+    background-color: rgb(46, 50, 56);
+    border-radius: 5px;
+    overflow-y: auto;
+}
+.friendList ul li{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 80px;
+    list-style: none;
+    border: 1px solid #26292E;
+}
+.friendList ul li a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: white;
+}
+.friendList ul li a:hover{
+
+    background-color: #45444d;
+}
+.friendList #friend_list .unreadMsg{
+    display: none;
+    position: relative;
+    left: -10px;
+    top: -20px;
+    background: #ff0000;
+    width: 20px;
+    height: 20px;
+    border-radius: 9px;
+    text-align: center;
+    font: 12px/1 "microsoft yahei";
+    padding: 3px 2px 3px 0px;
+}
+.friendList #friend_list #friendName{
+    margin-left: 15px;
+}
+.friendList #friend_list a img{
+    position: relative;
+    margin-left: 10px;
+    width: 50px;
+    height: 50px;
+}
+.chatBox .chat_area{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    width: 73%;
+    height: 100%;
+    border-radius: 5px;
+    background: #EEE;
+}
+.chat_area #chatObj{
+    width: 100%;
+    height: 6%;
+    text-align: center;
+}
+.chat_area .historyMsg{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 65%;
+    background-color: #EEE;
+    overflow-y: auto;
+    border-top: 2px solid #ede7f5;
+    border-bottom: 2px solid #ede7f5;
+}
+.chat_area .historyMsg ul{
+    height: 100%;
+    padding: 0 5px;
+    overflow-y: auto;
+}
+.historyMsg .other .msg{
+    display: flex;
+    margin: 5px 0 5px 0;
+    width: 100%;
+    color: #b2dba1;
+    position: relative;
+    flex-direction: row;
+}
+.historyMsg .me .msg{
+    display: flex;
+    margin: 5px 0 5px 0;
+    width: 100%;
+    color: #b2dba1;
+    position: relative;
+    flex-direction: row-reverse;
+}
+.historyMsg .other .msg .img-rounded,
+.historyMsg .me .msg .img-rounded {
+    width: 45px;
+    height: 45px;
+}
+.historyMsg .other .msg img{
+    margin-right: 15px;
+}
+.historyMsg .me .msg img{
+    margin-left: 15px;
+}
+.historyMsg .msg .ownImg{
+    max-width: 150px;
+    max-height: 150px;
+}
+.historyMsg li .time{
+    width: 100%;
+    text-align: center;
+    margin: 8px 0 8px 0;
+}
+.historyMsg li .time span{
+    background-color: #c3c3c3;
+    padding: 3px 15px 3px 15px;
+    color: white;
+    border-radius: 3px;
+}
+.historyMsg li p{
+    display: flex;
+    padding: 12px;
+    width: auto;
+    max-width: 67%;
+    align-items: center;
+    border-radius: 5px;
+    word-break: break-all;
+    font-family: "微软雅黑";
+    color: #000000;
+    font-weight: 500;
+    background-color: #B2E281;
+}
+.historyMsg .other p{
+    background-color: white;
+}
+.historyMsg .other .msg p:after{
+    content:"";
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 6.7%;
+    top: 30%;
+    border: 7px solid transparent;
+    border-right-color: white;
+    z-index: 999;
+}
+.historyMsg .me .msg p:after{
+    content:"";
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: 6.9%;
+    top: 30%;
+    border: 7px solid transparent;
+    border-left-color: #B2E281;
+    z-index: 999;
+}
+.chat_area .inputMsg{
+    width: 100%;
+    height: 26%;
+    background-color: #EEE;
+}
+.chat_area .inputMsg #items{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    height: 39px;
+}
+.chat_area .inputMsg #items #emoji{
+    display: none;
+    color: #EEE;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+.chat_area .inputMsg #items #showImage{
+    margin-left: 10px;
+}
+.chat_area .inputMsg #items #showEmoji img{
+    margin-top: 5.5px;
+    width: 23px;
+    height: 23px;
+}
+.chat_area .inputMsg #items #showImage input{
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+}
+.chat_area .inputMsg #items #showImage i{
+    position: relative;
+    font-size: 1.6em;
+    top: -13px;
+}
+.chat_area .inputMsg textarea{
+    width: 100%;
+    height: 62%;
+    background: #EEE;
+    border: none;
+    resize : none;
+    outline:none;
+    font-family: "微软雅黑";
+    color: #000000;
+    font-weight: 500;
+}
+.chat_area .inputMsg  #sendBtn{
+    position: relative;
+    left: 87%;
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    font-family: "微软雅黑";
+    color: #000000;
+}
+#emojiWrapper {
+    z-index: 999;
+    display: none;
+    position: absolute;
+    width: 450px;
+    bottom: 210px;
+    padding: 3px;
+    border-radius: 2px;
+    background-color: white;
+    box-shadow: 0 0 10px #555;
+}
+#emojiWrapper img {
+    margin: 2px;
+    padding: 2px;
+    width: 25px;
+    height: 25px;
+}
+
+
